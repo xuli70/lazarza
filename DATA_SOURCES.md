@@ -226,5 +226,49 @@ Años: 2020-2024
 
 ---
 
+## TAREAS PENDIENTES (TODO)
+
+### Prioridad ALTA
+- [ ] **Presupuestos**: Buscar en https://www.rendiciondecuentas.es datos de La Zarza
+- [ ] **Subvenciones**: Consultar BDNS (https://www.pap.hacienda.gob.es/bdnstrans/) con filtro "La Zarza" o "Ayuntamiento de La Zarza"
+- [ ] **Dashboard**: Marcar visualmente los datos no verificados con indicador ⚠️
+- [ ] **Código**: Eliminar o comentar datos inventados en `scripts/main.js`
+
+### Prioridad MEDIA
+- [ ] **Patrimonio**: Verificar bienes culturales en portal Junta de Extremadura
+- [ ] **Infraestructura**: Integrar datos reales de la API Diputación en el dashboard
+- [ ] **Servicios**: Mostrar datos reales de centros (sanitarios, educativos, culturales)
+
+### Prioridad BAJA
+- [ ] **Turismo**: Consultar Overpass API para POIs de La Zarza
+- [ ] **Comparativas**: Añadir datos de municipios similares (verificados)
+
+---
+
+## COMANDOS ÚTILES
+
+### Consultar API Diputación
+```bash
+# Listar datasets
+curl "https://datosabiertos.dip-badajoz.es/api/3/action/package_list"
+
+# Ver dataset específico
+curl "https://datosabiertos.dip-badajoz.es/api/3/action/package_show?id=centros-sanitarios"
+
+# Descargar y filtrar por La Zarza (código 6,162)
+curl "[URL_CSV]" | grep "^6,162"
+```
+
+### Verificar población INE
+```bash
+# Web oficial
+https://www.ine.es/jaxiT3/Tabla.htm?t=2859
+
+# Verificación secundaria
+https://www.foro-ciudad.com/badajoz/la-zarza/habitantes.html
+```
+
+---
+
 *Última actualización: 2025-12-05*
 *Código INE: 06162 | CP: 06830*

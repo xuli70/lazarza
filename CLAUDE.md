@@ -206,3 +206,20 @@ Docker build uses nginx:alpine (~40MB image) serving static files on port 80.
 ## Language
 
 All content is in Spanish. Dashboard targets citizens of La Zarza municipality.
+
+---
+
+## TAREAS PENDIENTES (para próxima sesión)
+
+### Prioridad ALTA
+1. **Presupuestos**: Buscar fuente oficial en https://www.rendiciondecuentas.es
+2. **Subvenciones**: Consultar BDNS para datos reales
+3. **Dashboard**: Marcar datos no verificados con indicador visual ⚠️
+4. **Código**: Eliminar/comentar datos inventados en `scripts/main.js`
+
+### Prioridad MEDIA
+5. **Patrimonio**: Verificar en Junta de Extremadura
+6. **Infraestructura**: Integrar datos reales de API Diputación
+7. **Servicios**: Mostrar datos reales de centros
+
+### Ver detalles completos en: [DATA_SOURCES.md](DATA_SOURCES.md)
