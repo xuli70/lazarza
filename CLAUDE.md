@@ -6,11 +6,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Dashboard Municipal de La Zarza - A citizen transparency tool (non-official) that centralizes verifiable public data about the municipality of La Zarza (06830, Badajoz, Extremadura, Spain). Built as a static single-page application.
 
+## URLs
+
+- **Production:** https://lazarza.axcsol.com
+- **Repository:** https://github.com/xuli70/lazarza
+
 ## Development Commands
 
 ```bash
+# Local development - open index.html directly in browser
 # No build process required - static files only
-# Open index.html directly in a browser to run
+
+# Deploy to production (Coolify auto-deploys on push to main)
+git push origin main
 
 # Optional: Minify for production
 terser scripts/main.js -o scripts/main.min.js
@@ -27,6 +35,8 @@ cleancss styles/main.css -o styles/main.min.css
 │   └── traceability.css   # Modal styles for data source verification
 ├── scripts/
 │   └── main.js            # All JavaScript logic
+├── Dockerfile              # nginx:alpine container for production
+├── nginx.conf              # nginx config with gzip, caching, security headers
 ```
 
 ### Key Design Principles
@@ -77,6 +87,18 @@ Uses CSS custom properties (variables) defined in `:root`. Key tokens:
 - Typography: `--text-h1` through `--text-small`
 
 Mobile-first responsive design with breakpoints at 480px, 768px, 1024px, 1440px.
+
+## Deployment
+
+Hosted on Coolify (Hostinger VPS) with automatic deployment on push to `main` branch.
+
+```bash
+# Manual deploy trigger via Coolify API
+# Application UUID: fkc0c480k44o4owg484wwsg8
+# Project: zarza (vgoc0gkcskgs4c048go84w8w)
+```
+
+Docker build uses nginx:alpine (~40MB image) serving static files on port 80.
 
 ## Language
 

@@ -1,5 +1,7 @@
 # Dashboard Municipal de La Zarza (06830, Badajoz)
 
+🌐 **Demo en vivo:** https://lazarza.axcsol.com
+
 ## 📋 Descripción
 
 Este dashboard municipal es una **herramienta de transparencia ciudadana NO OFICIAL** que centraliza datos públicos verificables sobre el municipio de La Zarza en la provincia de Badajoz, Extremadura.
@@ -257,6 +259,8 @@ dashboard-la-zarza/
 │   └── traceability.css    # Estilos de trazabilidad
 ├── scripts/
 │   └── main.js            # JavaScript principal
+├── Dockerfile              # Contenedor nginx:alpine para producción
+├── nginx.conf              # Configuración nginx (gzip, cache, seguridad)
 └── README.md              # Este archivo
 ```
 
