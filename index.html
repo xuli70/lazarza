@@ -113,7 +113,8 @@
                         </div>
                     </div>
 
-                    <div class="kpi-card-main" data-source="presupuesto">
+                    <div class="kpi-card-main unverified" data-source="presupuesto">
+                        <span class="data-unverified-badge">Sin verificar</span>
                         <div class="kpi-icon budget">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
@@ -140,7 +141,8 @@
                         </div>
                     </div>
 
-                    <div class="kpi-card-main" data-source="subvenciones">
+                    <div class="kpi-card-main unverified" data-source="subvenciones">
+                        <span class="data-unverified-badge">Sin verificar</span>
                         <div class="kpi-icon funding">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -474,6 +476,12 @@
 
                 <!-- Presupuestos Tab -->
                 <div id="presupuestos" class="tab-content active">
+                    <div class="section-unverified-notice">
+                        <h4>Datos pendientes de verificacion</h4>
+                        <p>Los datos de presupuesto mostrados son <strong>ilustrativos</strong> y no han sido verificados con fuentes oficiales.
+                        El presupuesto 2024 fue publicado en el <a href="https://www.dip-badajoz.es/toolsphp/descarga.php?fr=6&id=bop_2024-04-23000000_firmado.pdf" target="_blank">BOP n.77 (23/04/2024)</a>.
+                        Consulta <a href="https://serviciostelematicosext.hacienda.gob.es/SGFAL/CONPREL" target="_blank">CONPREL</a> para datos oficiales.</p>
+                    </div>
                     <div class="charts-grid">
                         <div class="chart-card">
                             <div class="chart-header">
@@ -1041,6 +1049,13 @@
                     <div class="loading-spinner"></div>
                     <p>Cargando datos de subvenciones desde la API de Diputación de Badajoz...</p>
                     <small>Fuente: datosabiertos.dip-badajoz.es</small>
+                </div>
+
+                <div class="section-unverified-notice">
+                    <h4>Datos ilustrativos - Pendientes de verificacion</h4>
+                    <p>Los datos de subvenciones mostrados son <strong>ilustrativos</strong>. Para datos reales consulta la
+                    <a href="https://www.pap.hacienda.gob.es/bdnstrans/GE/es/concesiones/beneficiario/P0616200B" target="_blank">Base de Datos Nacional de Subvenciones (BDNS)</a>
+                    buscando por CIF del Ayuntamiento: <code>P0616200B</code>.</p>
                 </div>
 
                 <!-- Panel de Impacto -->
@@ -1675,6 +1690,15 @@
                     <p class="section-description">Bienes de interés cultural y patrimonio histórico de La Zarza</p>
                 </div>
 
+                <div class="section-unverified-notice" style="background: linear-gradient(135deg, #d4edda 0%, #fff 100%); border-color: #c3e6cb;">
+                    <h4 style="color: #155724;">2 Bienes de Interes Cultural verificados</h4>
+                    <p>La Zarza cuenta con 2 BIC declarados oficialmente:
+                    <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-13611" target="_blank">Iglesia de San Martin</a> (Decreto 223/2014) y
+                    <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-18835" target="_blank">Abrigo de La Calderita</a> (Resolucion 2009).
+                    Otros elementos pendientes de verificacion en el
+                    <a href="https://www.juntaex.es/cultura/patrimonio" target="_blank">Catalogo de Patrimonio de Extremadura</a>.</p>
+                </div>
+
                 <div class="map-section">
                     <div class="map-card">
                         <div class="map-header">
@@ -1692,73 +1716,75 @@
                 <div class="patrimonio-grid">
                     <div class="patrimonio-card">
                         <div class="patrimonio-header">
-                            <h3>Iglesia Parroquial San Miguel Arcángel</h3>
-                            <button class="traceability-btn" data-source="iglesia-san-miguel">
+                            <h3>Iglesia de San Martin de Tours</h3>
+                            <span class="data-unverified-badge" style="background: #d4edda; color: #155724; border-color: #c3e6cb;">BIC Verificado</span>
+                            <button class="traceability-btn" data-source="iglesia-san-martin">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 11 2z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="patrimonio-content">
-                            <p><strong>Categoría:</strong> Monumento</p>
-                            <p><strong>Época:</strong> Siglo XVI-XVIII</p>
-                            <p><strong>Estado:</strong> Conservación Buena</p>
-                            <p><strong>Acceso:</strong> Público (horarios de culto)</p>
-                            <p class="patrimonio-desc">Iglesia principal del municipio con elementos mudéjares y barrocos. Declarada Bien de Interés Cultural.</p>
+                            <p><strong>Categoria:</strong> Monumento (BIC)</p>
+                            <p><strong>Epoca:</strong> Siglo XVI</p>
+                            <p><strong>Declaracion BIC:</strong> <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-13611" target="_blank">Decreto 223/2014, 30 septiembre</a></p>
+                            <p><strong>Acceso:</strong> Publico (horarios de culto)</p>
+                            <p class="patrimonio-desc">Templo del siglo XVI ubicado en zona elevada del pueblo. Ha sido restaurado en varias ocasiones, incluyendo reconstruccion del campanario.</p>
                         </div>
                     </div>
 
                     <div class="patrimonio-card">
                         <div class="patrimonio-header">
-                            <h3>Castillo de La Zarza</h3>
-                            <button class="traceability-btn" data-source="castillo-zarza">
+                            <h3>Abrigo de La Calderita</h3>
+                            <span class="data-unverified-badge" style="background: #d4edda; color: #155724; border-color: #c3e6cb;">BIC Verificado</span>
+                            <button class="traceability-btn" data-source="abrigo-calderita">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 11 2z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="patrimonio-content">
-                            <p><strong>Categoría:</strong> Zona Arqueológica</p>
-                            <p><strong>Época:</strong> Siglo XIII-XV</p>
-                            <p><strong>Estado:</strong> Ruinas</p>
-                            <p><strong>Acceso:</strong> Libre (restos)</p>
-                            <p class="patrimonio-desc">Fortificación medieval que controlaba el paso por la comarca. Conserva elementos de mampostería y estructuras defensivas.</p>
+                            <p><strong>Categoria:</strong> Zona Arqueologica (BIC)</p>
+                            <p><strong>Epoca:</strong> Prehistoria (Arte Rupestre)</p>
+                            <p><strong>Declaracion BIC:</strong> <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-18835" target="_blank">Resolucion 26/06/2009</a></p>
+                            <p><strong>Ubicacion:</strong> Sierra de Penas Blancas, 2km SO</p>
+                            <p class="patrimonio-desc">Tambien conocido como Gran Abrigo de Las Vinas. Contiene manifestaciones de arte rupestre protegidas por Ley 2/1999 de Patrimonio de Extremadura.</p>
                         </div>
                     </div>
 
                     <div class="patrimonio-card">
                         <div class="patrimonio-header">
-                            <h3>Ermita de San Antonio</h3>
-                            <button class="traceability-btn" data-source="ermita-san-antonio">
+                            <h3>Ermita Ntra. Sra. de las Nieves</h3>
+                            <button class="traceability-btn" data-source="ermita-nieves">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 11 2z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="patrimonio-content">
-                            <p><strong>Categoría:</strong> Monumento</p>
-                            <p><strong>Época:</strong> Siglo XVIII</p>
-                            <p><strong>Estado:</strong> Conservación Regular</p>
-                            <p><strong>Acceso:</strong> Público (eventos religiosos)</p>
-                            <p class="patrimonio-desc">Ermita barroca dedicada a San Antonio de Padua. Lugar de peregrinación tradicional del municipio.</p>
+                            <p><strong>Categoria:</strong> Monumento religioso</p>
+                            <p><strong>Epoca:</strong> Sin determinar</p>
+                            <p><strong>Estado:</strong> Pendiente verificacion</p>
+                            <p><strong>Acceso:</strong> Publico (eventos religiosos)</p>
+                            <p class="patrimonio-desc">Ermita dedicada a la Virgen de las Nieves, imagen muy venerada en la comarca. Lugar de peregrinacion tradicional.</p>
                         </div>
                     </div>
 
                     <div class="patrimonio-card">
                         <div class="patrimonio-header">
-                            <h3>Molino de Viento</h3>
-                            <button class="traceability-btn" data-source="molino-viento">
+                            <h3>Otros monumentos</h3>
+                            <button class="traceability-btn" data-source="otros-monumentos">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 11 2z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="patrimonio-content">
-                            <p><strong>Categoría:</strong> Etnológico</p>
-                            <p><strong>Época:</strong> Siglo XIX</p>
-                            <p><strong>Estado:</strong> Ruinas</p>
-                            <p><strong>Acceso:</strong> Libre</p>
-                            <p class="patrimonio-desc">Restos del antiguo molino de viento que molturaba cereales para el abastecimiento del municipio.</p>
+                            <p><strong>El Pilar:</strong> Fuente historica</p>
+                            <p><strong>Monumento al Arriero:</strong> Escultura conmemorativa</p>
+                            <p><strong>Estatua del Emigrante:</strong> Homenaje a la emigracion</p>
+                            <p><strong>Estado:</strong> Pendiente verificacion oficial</p>
+                            <p class="patrimonio-desc">Conjunto de elementos patrimoniales del municipio pendientes de catalogacion oficial.</p>
                         </div>
                     </div>
                 </div>
@@ -2251,33 +2277,36 @@
                             <div class="infra-header">
                                 <div class="infra-icon">🏥</div>
                                 <h3>Centros Sanitarios</h3>
+                                <span class="data-unverified-badge" style="background: #d4edda; color: #155724; border-color: #c3e6cb; font-size: 9px;">API Diputacion</span>
                             </div>
                             <div class="infra-content">
                                 <h4>Centro de Salud</h4>
                                 <div class="infra-details">
-                                    <p><strong>Ubicación:</strong> Plaza de España, 15</p>
-                                    <p><strong>Horario:</strong> Lunes a Sábado 8:00-20:00</p>
-                                    <p><strong>Teléfono:</strong> +34 924 123 000</p>
-                                    <p><strong>Servicios:</strong> Medicina general, pediatría, enfermería, urgencias</p>
+                                    <p><strong>Tipo:</strong> CDS (Centro de Salud)</p>
+                                    <p><strong>Titularidad:</strong> SAS (Servicio Andaluz de Salud)</p>
+                                    <p><strong>Superficie:</strong> 940 m² construidos</p>
+                                    <p><strong>Accesibilidad:</strong> Si</p>
                                 </div>
                                 <div class="infra-status activo">🟢 Operativo</div>
+                                <small style="color: #666; font-size: 11px;">Fuente: API Diputacion Badajoz (2025)</small>
                             </div>
                         </div>
 
                         <div class="infra-card">
                             <div class="infra-header">
                                 <div class="infra-icon">🏫</div>
-                                <h3>Educación</h3>
+                                <h3>Educacion (3 centros)</h3>
+                                <span class="data-unverified-badge" style="background: #d4edda; color: #155724; border-color: #c3e6cb; font-size: 9px;">API Diputacion</span>
                             </div>
                             <div class="infra-content">
-                                <h4>CEIP "Fernando de los Ríos"</h4>
+                                <h4>Centros Educativos Verificados</h4>
                                 <div class="infra-details">
-                                    <p><strong>Alumnos:</strong> 192 (Educación Infantil y Primaria)</p>
-                                    <p><strong>Profesores:</strong> 15 docentes + 3 personal no docente</p>
-                                    <p><strong>Instalaciones:</strong> 12 aulas, biblioteca, gimnasio, comedor</p>
-                                    <p><strong>Programas:</strong> Inglés, educación vial, medio ambiente</p>
+                                    <p><strong>Escuela Educacion Infantil:</strong> 850 m²</p>
+                                    <p><strong>C.E.I.P. Ntra Sra de las Nieves:</strong> 6.006 m²</p>
+                                    <p><strong>I.E.S. Tierrablanca:</strong> 15.180 m²</p>
                                 </div>
-                                <div class="infra-status activo">🟢 Operativo</div>
+                                <div class="infra-status activo">🟢 3 centros operativos</div>
+                                <small style="color: #666; font-size: 11px;">Fuente: API Diputacion Badajoz (2025)</small>
                             </div>
                         </div>
 
@@ -2301,23 +2330,42 @@
 
                         <div class="infra-card">
                             <div class="infra-header">
-                                <div class="infra-icon">🏋️</div>
-                                <h3>Servicios Municipales</h3>
+                                <div class="infra-icon">🏛️</div>
+                                <h3>Centros Culturales (6)</h3>
+                                <span class="data-unverified-badge" style="background: #d4edda; color: #155724; border-color: #c3e6cb; font-size: 9px;">API Diputacion</span>
                             </div>
                             <div class="infra-content">
-                                <h4>Biblioteca Municipal</h4>
+                                <h4>Equipamientos Culturales Verificados</h4>
                                 <div class="infra-details">
-                                    <p><strong>Fondos:</strong> 8.500 libros, 120 revistas, 250 DVD</p>
-                                    <p><strong>Horario:</strong> Lun-Vie 16:00-20:00, Sáb 10:00-14:00</p>
-                                    <p><strong>Servicios:</strong> Préstamo, consulta, internet gratuito</p>
+                                    <p><strong>Casa de la Cultura y Biblioteca:</strong> 316 m²</p>
+                                    <p><strong>Auditorio Municipal:</strong> 1.306 m²</p>
+                                    <p><strong>Centro Cultural El Albergue:</strong> 1.676 m²</p>
+                                    <p><strong>Hogar de Mayores:</strong> 162 m²</p>
+                                    <p><strong>Centro Joven:</strong> 206 m²</p>
+                                    <p><strong>Centro de Ocio Juvenil:</strong> 891 m²</p>
                                 </div>
-                                <h4>Polideportivo Municipal</h4>
+                                <div class="infra-status activo">🟢 6 centros operativos</div>
+                                <small style="color: #666; font-size: 11px;">Fuente: API Diputacion Badajoz (2025)</small>
+                            </div>
+                        </div>
+
+                        <div class="infra-card">
+                            <div class="infra-header">
+                                <div class="infra-icon">🏋️</div>
+                                <h3>Instalaciones Deportivas (5)</h3>
+                                <span class="data-unverified-badge" style="background: #d4edda; color: #155724; border-color: #c3e6cb; font-size: 9px;">API Diputacion</span>
+                            </div>
+                            <div class="infra-content">
+                                <h4>Equipamientos Deportivos Verificados</h4>
                                 <div class="infra-details">
-                                    <p><strong>Instalaciones:</strong> Pista polideportiva, pistas de tenis, piscina</p>
-                                    <p><strong>Horario:</strong> 7:00-22:00 diario</p>
-                                    <p><strong>Actividades:</strong> Fitness, spinning, waterpolo, tenis</p>
+                                    <p><strong>Ciudad Deportiva La Zarza:</strong> 22.681 m²</p>
+                                    <p><strong>Piscina Municipal:</strong> 4.862 m²</p>
+                                    <p><strong>Pabellon Polideportivo:</strong> 2.727 m²</p>
+                                    <p><strong>Palacio Municipal de Deportes:</strong> 10.358 m²</p>
+                                    <p><strong>Pistas Polideportivas La Amargura:</strong> 3.003 m²</p>
                                 </div>
-                                <div class="infra-status activo">🟢 Operativo</div>
+                                <div class="infra-status activo">🟢 5 instalaciones operativas</div>
+                                <small style="color: #666; font-size: 11px;">Fuente: API Diputacion Badajoz (2024)</small>
                             </div>
                         </div>
 

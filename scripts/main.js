@@ -172,10 +172,19 @@ const poblacionHistorica = {
   data: [3586, 3542, 3485, 3508, 3472, 3402, 3380, 3386, 3369, 3345]
 };
 
-// Datos de presupuesto
+// ==========================================
+// DATOS DE PRESUPUESTO - ILUSTRATIVOS (NO VERIFICADOS)
+// ==========================================
+// AVISO: Los siguientes datos son ILUSTRATIVOS y NO han sido verificados
+// con fuentes oficiales. El presupuesto real de La Zarza 2024 fue publicado
+// en el BOP n.77 (23/04/2024). Para datos oficiales consultar:
+// - CONPREL: https://serviciostelematicosext.hacienda.gob.es/SGFAL/CONPREL
+// - Rendicion de Cuentas: https://www.rendiciondecuentas.es
+// ==========================================
 const presupuestoCapitulos = {
   labels: ['Gastos de Personal', 'Bienes Corrientes', 'Transferencias', 'Inversiones', 'Gastos Financieros'],
-  data: [1680000, 720000, 320000, 400000, 80000]
+  data: [1680000, 720000, 320000, 400000, 80000], // DATOS ILUSTRATIVOS
+  _disclaimer: 'DATOS ILUSTRATIVOS - NO VERIFICADOS'
 };
 
 // Datos de estructura poblacional por edad (Fuente: INE 2024)
@@ -189,10 +198,13 @@ const estructuraEdad = {
 };
 
 // ==========================================
-// DATOS EXPANDIDOS DE HACIENDA PÚBLICA
+// DATOS EXPANDIDOS DE HACIENDA PUBLICA - ILUSTRATIVOS (NO VERIFICADOS)
+// ==========================================
+// AVISO: Todos los datos financieros en esta seccion son ILUSTRATIVOS
+// y NO representan cifras reales del Ayuntamiento de La Zarza.
 // ==========================================
 
-// Datos adicionales para gráficos de Hacienda
+// Datos adicionales para gráficos de Hacienda (ILUSTRATIVOS)
 const evolucionPresupuestaria = {
   labels: ['2020', '2021', '2022', '2023', '2024'],
   total: [2800000, 2900000, 3000000, 3100000, 3200000],
@@ -253,7 +265,12 @@ const benchmarkingMunicipios = {
 };
 
 // ==========================================
-// DATOS COMPLETOS DE SUBVENCIONES Y AYUDAS
+// DATOS COMPLETOS DE SUBVENCIONES Y AYUDAS - ILUSTRATIVOS (NO VERIFICADOS)
+// ==========================================
+// AVISO: Los siguientes datos de subvenciones son ILUSTRATIVOS y NO reales.
+// Para consultar subvenciones reales del Ayuntamiento de La Zarza:
+// - BDNS (CIF: P0616200B): https://www.pap.hacienda.gob.es/bdnstrans/GE/es/concesiones/beneficiario/P0616200B
+// - Datos.gob.es: https://datos.gob.es
 // ==========================================
 
 const subvencionesData = [

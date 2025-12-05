@@ -9,7 +9,10 @@
   --primary-100: #E6F0FF;
   --primary-700: #004C99;
   --success-500: #00AA00;
+  --warning-100: #FFF8E6;
+  --warning-200: #FFE5B3;
   --warning-500: #FFAA00;
+  --warning-700: #CC8800;
   --error-500: #CC0000;
   --offline-500: #B91C1C;
   --neutral-900: #18181B;
@@ -4878,4 +4881,106 @@ body {
   .consulta-actions {
     flex-direction: column;
   }
+}
+
+/* ==========================================
+   BADGE DATOS NO VERIFICADOS
+   ========================================== */
+.data-unverified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--warning-100);
+  color: var(--warning-700);
+  border: 1px solid var(--warning-200);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-unverified-badge::before {
+  content: "\26A0";
+  font-style: normal;
+}
+
+.data-unverified-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-16);
+  background: var(--warning-100);
+  border: 1px solid var(--warning-200);
+  border-left: 4px solid var(--warning-500);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-16);
+  font-size: 13px;
+  color: var(--warning-700);
+}
+
+.data-unverified-banner strong {
+  color: var(--warning-700);
+}
+
+.data-unverified-banner a {
+  color: var(--warning-700);
+  text-decoration: underline;
+}
+
+.kpi-card-main.unverified {
+  position: relative;
+  opacity: 0.85;
+}
+
+.kpi-card-main.unverified::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed var(--warning-500);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.kpi-card-main.unverified .kpi-value-main {
+  color: var(--neutral-600);
+}
+
+.kpi-card-main .data-unverified-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+}
+
+.section-unverified-notice {
+  background: linear-gradient(135deg, var(--warning-100) 0%, #fff 100%);
+  border: 1px solid var(--warning-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-20);
+  margin-bottom: var(--space-24);
+  text-align: center;
+}
+
+.section-unverified-notice h4 {
+  color: var(--warning-700);
+  margin-bottom: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+}
+
+.section-unverified-notice p {
+  color: var(--neutral-600);
+  font-size: 14px;
+  margin: 0;
+}
+
+.section-unverified-notice a {
+  color: var(--primary-500);
 }

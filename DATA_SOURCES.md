@@ -74,20 +74,27 @@ Licencia: CC-BY
 Filtro: codigo_provincia=6, codigo_municipio=162
 ```
 
-### Datasets Verificados con Datos de La Zarza
+### Datasets Verificados con Datos de La Zarza (Consultados 2025-12-05)
 
-| Dataset | Registros | URL CSV 2025 |
-|---------|-----------|--------------|
-| casas-consistoriales | 8 | [CSV](https://datosabiertos.dip-badajoz.es/.../casasconsistoriales2025.csv) |
-| cementerios | 1 | [CSV](https://datosabiertos.dip-badajoz.es/.../cementerios2025.csv) |
-| centros-sanitarios | 1 | [CSV](https://datosabiertos.dip-badajoz.es/.../centrossanitarios2025.csv) |
-| centros-ensenanza | 3 | [CSV](https://datosabiertos.dip-badajoz.es/.../centrosensenanza2025.csv) |
-| centros-culturales | 6 | [CSV](https://datosabiertos.dip-badajoz.es/.../centrosculturales2025.csv) |
-| centros-asistenciales | 1 | [CSV](https://datosabiertos.dip-badajoz.es/.../centrosasistenciales2025.csv) |
-| instalaciones-deportivas | 5 | [CSV](https://datosabiertos.dip-badajoz.es/.../instalacionesdeportivas2025.csv) |
-| parques | 9 | [CSV](https://datosabiertos.dip-badajoz.es/.../parques2025.csv) |
-| depositos | 5 | [CSV](https://datosabiertos.dip-badajoz.es/.../depositos2025.csv) |
-| potabilizacion | 1 | [CSV](https://datosabiertos.dip-badajoz.es/.../potabilizacion2025.csv) |
+| Dataset | Registros | Detalle |
+|---------|-----------|---------|
+| centros-sanitarios | 1 | Centro de Salud (940m²) |
+| centros-ensenanza | 3 | Escuela Infantil, CEIP Ntra Sra de las Nieves, IES Tierrablanca |
+| centros-culturales | 6 | Casa de la Cultura, Auditorio Municipal, Centro El Albergue, Hogar de Mayores, Centro Joven, Centro Ocio Juvenil |
+| instalaciones-deportivas | 5 | Ciudad Deportiva, Piscina Municipal, Pistas Polideportivas, Palacio de Deportes, Pabellon Polideportivo |
+| parques | 9 | Parque Monte Calvario, Parque Sr. Jose, Parque San Marcos, Parque Valdelirios, Parque de las Nieves, etc. |
+
+### URLs CSV Verificadas (2025)
+```
+centros-sanitarios: https://datosabiertos.dip-badajoz.es/.../centrossanitarios2025.csv
+centros-ensenanza: https://datosabiertos.dip-badajoz.es/.../centrosensenanza2025.csv
+centros-culturales: https://datosabiertos.dip-badajoz.es/.../centrosculturales2025.csv
+instalaciones-deportivas: https://datosabiertos.dip-badajoz.es/.../instalacionesdeportivas2024.csv (2025 no disponible aun)
+parques: https://datosabiertos.dip-badajoz.es/.../parques2024.csv
+```
+
+### Filtro para La Zarza
+Los datos se filtran por `codigo_provincia=6, codigo_municipio=162` (primeras dos columnas del CSV)
 
 ### Ejemplo de Consulta API
 ```bash
@@ -157,21 +164,35 @@ Años: 2020-2024
 
 ## 5. PATRIMONIO CULTURAL
 
-### Estado de Verificación: ⚠️ PENDIENTE
+### Estado de Verificación: ✅ PARCIALMENTE VERIFICADO
 
-| Dato | Valor Actual | Estado |
-|------|--------------|--------|
-| Bienes catalogados | 7 | ⚠️ Sin verificar |
-| Iglesia San Miguel | BIC | ⚠️ Verificar en Junta Extremadura |
+| Bien | Categoría | Declaración | Fuente |
+|------|-----------|-------------|--------|
+| Iglesia de San Martín de Tours | Monumento (BIC) | Decreto 223/2014, 30/09/2014 | [BOE-A-2014-13611](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-13611) |
+| Abrigo de La Calderita | Zona Arqueológica (BIC) | Resolución 26/06/2009 | [BOE-A-2010-18835](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-18835) |
+| Ermita Ntra. Sra. de las Nieves | Monumento religioso | Pendiente | Pendiente verificación |
+| El Pilar, Monumento al Arriero, Estatua del Emigrante | Otros | Pendiente | Pendiente verificación |
 
-### Fuentes Potenciales
-1. **Junta de Extremadura - Patrimonio**
+### Notas sobre la Iglesia de San Martín
+- Siglo XVI, ubicada en zona elevada del pueblo
+- Expediente BIC incoado: 13/05/1991 (DOE nº39, BOE nº187)
+- Restauraciones: cubierta y reconstrucción completa del campanario
+- Diócesis: Mérida-Badajoz
+
+### Notas sobre el Abrigo de La Calderita
+- También conocido como "Gran Abrigo de Las Viñas"
+- Ubicación: Sierra de Peñas Blancas, 2km al SO de La Zarza
+- Parcela 474, Polígono 7
+- Arte rupestre protegido por Ley 2/1999 de Patrimonio de Extremadura
+
+### Fuentes Verificadas
+1. **BOE - Declaraciones BIC**
+   - Iglesia: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-13611
+   - Abrigo: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-18835
+
+2. **Junta de Extremadura - Patrimonio**
    - URL: https://www.juntaex.es/cultura/patrimonio
    - Catálogo de BIC
-
-2. **Ministerio de Cultura**
-   - Bienes de Interés Cultural
-   - Base de datos del Patrimonio
 
 ---
 
@@ -229,15 +250,15 @@ Años: 2020-2024
 ## TAREAS PENDIENTES (TODO)
 
 ### Prioridad ALTA
-- [ ] **Presupuestos**: Buscar en https://www.rendiciondecuentas.es datos de La Zarza
-- [ ] **Subvenciones**: Consultar BDNS (https://www.pap.hacienda.gob.es/bdnstrans/) con filtro "La Zarza" o "Ayuntamiento de La Zarza"
-- [ ] **Dashboard**: Marcar visualmente los datos no verificados con indicador ⚠️
-- [ ] **Código**: Eliminar o comentar datos inventados en `scripts/main.js`
+- [x] **Presupuestos**: Investigado - Publicado en BOP n.77 (23/04/2024). Datos en CONPREL requieren consulta manual
+- [x] **Subvenciones**: Investigado - BDNS requiere consulta por CIF P0616200B (portal JavaScript)
+- [x] **Dashboard**: Marcados datos no verificados con indicadores visuales (CSS + HTML)
+- [x] **Código**: Comentados datos ilustrativos en `scripts/main.js` con avisos claros
 
 ### Prioridad MEDIA
-- [ ] **Patrimonio**: Verificar bienes culturales en portal Junta de Extremadura
-- [ ] **Infraestructura**: Integrar datos reales de la API Diputación en el dashboard
-- [ ] **Servicios**: Mostrar datos reales de centros (sanitarios, educativos, culturales)
+- [x] **Patrimonio**: Verificado - 2 BIC oficiales (Iglesia San Martin + Abrigo Calderita)
+- [x] **Infraestructura**: Verificada API Diputacion - datos reales obtenidos
+- [x] **Servicios**: Actualizados datos reales de centros en el dashboard (sanitarios, educativos, culturales, deportivos)
 
 ### Prioridad BAJA
 - [ ] **Turismo**: Consultar Overpass API para POIs de La Zarza
@@ -270,5 +291,29 @@ https://www.foro-ciudad.com/badajoz/la-zarza/habitantes.html
 
 ---
 
-*Última actualización: 2025-12-05*
-*Código INE: 06162 | CP: 06830*
+*Ultima actualizacion: 2025-12-05*
+*Codigo INE: 06162 | CP: 06830*
+
+---
+
+## CHANGELOG SESION 2025-12-05
+
+### Completado
+1. **Presupuestos**: Investigado en Rendicion de Cuentas y CONPREL. Presupuesto 2024 publicado en BOP n.77 (23/04/2024). No hay API publica accesible.
+2. **Subvenciones**: Investigado BDNS. Portal requiere JavaScript. CIF Ayto: P0616200B
+3. **Indicadores visuales**: Anadidos badges "Sin verificar" a KPIs de presupuesto y subvenciones. Avisos en secciones.
+4. **Codigo JS**: Comentados datos ilustrativos con avisos claros de fuentes pendientes.
+5. **Patrimonio**: Verificados 2 BIC oficiales:
+   - Iglesia de San Martin de Tours (BOE-A-2014-13611)
+   - Abrigo de La Calderita (BOE-A-2010-18835)
+6. **API Diputacion**: Verificada y consultada. Datos reales obtenidos para La Zarza.
+7. **Centros municipales**: Actualizados con datos reales de la API:
+   - 1 centro sanitario (940 m²)
+   - 3 centros educativos (CEIP Ntra Sra Nieves, IES Tierrablanca, Escuela Infantil)
+   - 6 centros culturales
+   - 5 instalaciones deportivas
+   - 9 parques
+
+### Pendiente (Prioridad Baja)
+- Turismo: Consultar Overpass API
+- Comparativas: Datos de municipios similares
