@@ -1954,8 +1954,7 @@ body {
 }
 
 .chart-card-main canvas {
-  height: 350px;
-  max-height: 400px;
+  height: 220px;
 }
 
 .chart-header {
@@ -1981,7 +1980,7 @@ body {
   }
 
   .chart-card-main canvas {
-    height: 250px;
+    height: 180px;
   }
 
   .kpi-grid-main {
