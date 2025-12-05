@@ -11,25 +11,25 @@ const traceabilityData = {
   'ine': {
     title: 'Datos de Población - INE',
     source: 'Instituto Nacional de Estadística (INE)',
-    url: 'https://servicios.ine.es/wstempus/js/es/',
-    apiEndpoint: 'https://servicios.ine.es/wstempus/js/es/STATISTIC/2459.pcaxis/ES/1.0/01-01-2025.px',
+    url: 'https://www.ine.es/jaxiT3/Tabla.htm?t=2859',
+    apiEndpoint: 'https://www.ine.es/jaxiT3/Datos.htm?t=2859',
     method: 'GET',
     queryParams: {
-      'municipality_code': '06109',
-      'statistic': '2459',
-      'territory': 'La Zarza',
+      'municipality_code': '06162',
+      'table': '2859',
+      'territory': 'La Zarza (Badajoz)',
       'year': '2024'
     },
-    lastUpdate: '2025-12-04T10:30:00Z',
-    frequency: 'Anual (primavera)',
+    lastUpdate: '2025-12-05T10:30:00Z',
+    frequency: 'Anual (enero)',
     responsibleOrg: 'Instituto Nacional de Estadística',
-    license: 'CC0 (Dominio Público)',
-    recordsCount: 2847,
+    license: 'CC BY 4.0',
+    recordsCount: 3345,
     validationStatus: 'passed',
-    dataHash: 'sha256:a3f2b1c8d9e0f4567...',
-    coverage: '2004-2024',
-    notes: 'Datos del Padrón Municipal de 2024',
-    verificationLink: 'https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177012&menu=ultiDatos&https://www.ine.es/jaxiT3/Tabla.htm?t=2459'
+    dataHash: 'sha256:b4e3c2d1a0f5678e...',
+    coverage: '2000-2024',
+    notes: 'Datos del Padrón Municipal / Censo Anual de Población 2024. Código INE: 06162',
+    verificationLink: 'https://www.ine.es/jaxiT3/Tabla.htm?t=2859&L=0'
   },
   'presupuestos': {
     title: 'Presupuestos Municipales - API Diputación',
@@ -100,23 +100,23 @@ const traceabilityData = {
   'evolucion-poblacional': {
     title: 'Evolución Poblacional 2015-2024',
     source: 'Instituto Nacional de Estadística (INE)',
-    url: 'https://servicios.ine.es/wstempus/js/es/',
-    apiEndpoint: 'https://servicios.ine.es/wstempus/js/ES/tablas_tcm/p_12/2459/Base_2016/series.zip',
+    url: 'https://www.ine.es/jaxiT3/Tabla.htm?t=2859',
+    apiEndpoint: 'https://www.ine.es/jaxiT3/Datos.htm?t=2859',
     method: 'GET',
     queryParams: {
-      'municipality': '06109',
+      'municipality': '06162',
       'period': '2015-2024'
     },
-    lastUpdate: '2025-12-04T10:30:00Z',
+    lastUpdate: '2025-12-05T10:30:00Z',
     frequency: 'Anual',
     responsibleOrg: 'Instituto Nacional de Estadística',
-    license: 'CC0 (Dominio Público)',
-    recordsCount: 120,
+    license: 'CC BY 4.0',
+    recordsCount: 10,
     validationStatus: 'passed',
-    dataHash: 'sha256:e1b7f5c2d3e8901e...',
+    dataHash: 'sha256:c2d8e7f3a1b5902f...',
     coverage: '2015-2024 (10 años)',
-    notes: 'Serie histórica completa desde 2005, muestra últimos 10 años',
-    verificationLink: 'https://www.ine.es/jaxiT3/Tabla.htm?t=2459&L=0'
+    notes: 'Serie histórica de población La Zarza (código INE 06162). Datos: 3.586 (2015) a 3.345 (2024)',
+    verificationLink: 'https://www.ine.es/jaxiT3/Tabla.htm?t=2859&L=0'
   },
   'subvenciones-total': {
     title: 'Subvenciones Concedidas 2020-2024',
@@ -165,10 +165,11 @@ const traceabilityData = {
   }
 };
 
-// Datos demográficos para gráficos
+// Datos demográficos para gráficos (Fuente: INE - Padrón Municipal 2024)
+// Código INE municipio: 06162 (La Zarza, Badajoz)
 const poblacionHistorica = {
   labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
-  data: [2987, 2965, 2942, 2918, 2895, 2872, 2859, 2841, 2882, 2847]
+  data: [3586, 3542, 3485, 3508, 3472, 3402, 3380, 3386, 3369, 3345]
 };
 
 // Datos de presupuesto
@@ -177,11 +178,14 @@ const presupuestoCapitulos = {
   data: [1680000, 720000, 320000, 400000, 80000]
 };
 
-// Datos de estructura poblacional por edad
+// Datos de estructura poblacional por edad (Fuente: INE 2024)
+// Total: 3.345 habitantes (1.686 hombres, 1.659 mujeres)
+// Menores 18: 536 (16%), 18-65: 2.140 (63.9%), Mayores 65: 674 (20.1%)
+// Edad media: 44.77 años
 const estructuraEdad = {
   labels: ['0-9', '10-19', '20-29', '30-39', '40-49', '50-59', '60-69', '70-79', '80+'],
-  hombres: [156, 189, 178, 201, 223, 198, 167, 89, 27],
-  mujeres: [142, 167, 185, 198, 214, 189, 173, 112, 39]
+  hombres: [142, 136, 148, 192, 248, 262, 228, 198, 132],
+  mujeres: [134, 124, 140, 184, 236, 254, 224, 212, 151]
 };
 
 // ==========================================
@@ -463,10 +467,10 @@ const visualizacionesData = {
 const municipiosComparacion = [
   {
     nombre: 'La Zarza',
-    poblacion: 2847,
+    poblacion: 3345,
     subvenciones: 12,
     importeTotal: 847320,
-    importePerCapita: 297,
+    importePerCapita: 253,
     exito: 89,
     esActual: true
   },

@@ -120,10 +120,10 @@ const traceabilityData = {
 
 #### Datos de Visualización
 ```javascript
-// Datos para gráficos Chart.js
+// Datos para gráficos Chart.js (Fuente: INE - Código municipio 06162)
 const poblacionHistorica = {
   labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
-  data: [2987, 2965, 2942, 2918, 2895, 2872, 2859, 2841, 2882, 2847]
+  data: [3586, 3542, 3485, 3508, 3472, 3402, 3380, 3386, 3369, 3345]
 };
 
 // Coordenadas para mapas Leaflet
@@ -273,7 +273,7 @@ async function fetchPopulationData() {
   return {
     population: data.value,
     year: 2024,
-    municipality: '06109',
+    municipality: '06162',  // Código INE correcto de La Zarza (Badajoz)
     timestamp: new Date().toISOString(),
     hash: await calculateHash(data)
   };
@@ -390,8 +390,8 @@ document.addEventListener('click', function(e) {
       <svg>...</svg>
     </button>
   </div>
-  <div class="kpi-value">2.847</div>
-  <div class="kpi-trend trend-up">↑ 1.2% vs 2024</div>
+  <div class="kpi-value">3.345</div>
+  <div class="kpi-trend trend-down">↓ 0.7% vs 2023</div>
   <div class="kpi-source">Fuente oficial</div>
 </div>
 ```

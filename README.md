@@ -312,11 +312,11 @@ Cada dato incluye información completa para su verificación manual:
 - **Verificar en**: https://datosabiertos.dip-badajoz.es/dataset/presupuestos-municipales-2024
 
 ### 👥 Población 2024
-- **Fuente**: Instituto Nacional de Estadística
-- **Endpoint**: `/wstempus/js/es/STATISTIC/2459.pcaxis/ES/1.0/01-01-2025.px`
-- **Última actualización**: 4 dic 2025, 10:30
-- **Valor**: 2.847 habitantes
-- **Verificar en**: https://www.ine.es/jaxiT3/Tabla.htm?t=2459
+- **Fuente**: Instituto Nacional de Estadística (Censo Anual de Población)
+- **Código INE**: 06162 (La Zarza, Badajoz)
+- **Última actualización**: 5 dic 2025
+- **Valor**: 3.345 habitantes
+- **Verificar en**: https://www.ine.es/jaxiT3/Tabla.htm?t=2859
 
 ## 🛡️ Seguridad y Privacidad
 
