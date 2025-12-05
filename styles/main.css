@@ -1951,10 +1951,12 @@ body {
   padding: var(--space-24);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--neutral-200);
+  contain: layout style;
 }
 
 .chart-card-main canvas {
   height: 220px;
+  display: block;
 }
 
 .chart-header {

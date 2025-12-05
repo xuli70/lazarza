@@ -2211,7 +2211,7 @@ function initializeCharts() {
 
 function createPoblacionChart() {
   const ctx = document.getElementById('poblacionChart');
-  if (!ctx) return;
+  if (!ctx || ctx.dataset.initialized) return;
 
   new Chart(ctx, {
     type: 'line',
@@ -2229,6 +2229,7 @@ function createPoblacionChart() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      animation: false,
       plugins: {
         legend: {
           display: false
@@ -2243,12 +2244,14 @@ function createPoblacionChart() {
       }
     }
   });
+
+  ctx.dataset.initialized = 'true';
 }
 
 function createPresupuestoCharts() {
   // Gráfico donut de capítulos
   const donutCtx = document.getElementById('presupuestoDonut');
-  if (donutCtx) {
+  if (donutCtx && !donutCtx.dataset.initialized) {
     new Chart(donutCtx, {
       type: 'doughnut',
       data: {
@@ -2267,6 +2270,7 @@ function createPresupuestoCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2274,11 +2278,12 @@ function createPresupuestoCharts() {
         }
       }
     });
+    donutCtx.dataset.initialized = 'true';
   }
 
   // Gráfico de línea para evolución presupuestaria
   const lineCtx = document.getElementById('presupuestoLine');
-  if (lineCtx) {
+  if (lineCtx && !lineCtx.dataset.initialized) {
     new Chart(lineCtx, {
       type: 'line',
       data: {
@@ -2306,6 +2311,7 @@ function createPresupuestoCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2322,11 +2328,12 @@ function createPresupuestoCharts() {
         }
       }
     });
+    lineCtx.dataset.initialized = 'true';
   }
 
   // Gráfico de ejecución trimestral
   const trimestralCtx = document.getElementById('ejecucionTrimestral');
-  if (trimestralCtx) {
+  if (trimestralCtx && !trimestralCtx.dataset.initialized) {
     new Chart(trimestralCtx, {
       type: 'bar',
       data: {
@@ -2351,6 +2358,7 @@ function createPresupuestoCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2367,11 +2375,12 @@ function createPresupuestoCharts() {
         }
       }
     });
+    trimestralCtx.dataset.initialized = 'true';
   }
 
   // Gráfico de comparación provincial
   const comparacionCtx = document.getElementById('comparacionProvincial');
-  if (comparacionCtx) {
+  if (comparacionCtx && !comparacionCtx.dataset.initialized) {
     new Chart(comparacionCtx, {
       type: 'radar',
       data: {
@@ -2396,6 +2405,7 @@ function createPresupuestoCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2408,11 +2418,12 @@ function createPresupuestoCharts() {
         }
       }
     });
+    comparacionCtx.dataset.initialized = 'true';
   }
 
   // Gráfico de indicadores de solvencia
   const solvenciaCtx = document.getElementById('indicadoresSolvencia');
-  if (solvenciaCtx) {
+  if (solvenciaCtx && !solvenciaCtx.dataset.initialized) {
     new Chart(solvenciaCtx, {
       type: 'bar',
       data: {
@@ -2438,6 +2449,7 @@ function createPresupuestoCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2454,6 +2466,7 @@ function createPresupuestoCharts() {
         }
       }
     });
+    solvenciaCtx.dataset.initialized = 'true';
   }
 }
 
@@ -2464,7 +2477,7 @@ function createPresupuestoCharts() {
 function createTransferenciasCharts() {
   // Gráfico de transferencias por organismo
   const organismosCtx = document.getElementById('transferenciasOrganismos');
-  if (organismosCtx) {
+  if (organismosCtx && !organismosCtx.dataset.initialized) {
     new Chart(organismosCtx, {
       type: 'pie',
       data: {
@@ -2483,6 +2496,7 @@ function createTransferenciasCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2490,11 +2504,12 @@ function createTransferenciasCharts() {
         }
       }
     });
+    organismosCtx.dataset.initialized = 'true';
   }
 
   // Gráfico de evolución de transferencias
   const evolTransCtx = document.getElementById('evolucionTransferencias');
-  if (evolTransCtx) {
+  if (evolTransCtx && !evolTransCtx.dataset.initialized) {
     new Chart(evolTransCtx, {
       type: 'line',
       data: {
@@ -2537,6 +2552,7 @@ function createTransferenciasCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2553,11 +2569,12 @@ function createTransferenciasCharts() {
         }
       }
     });
+    evolTransCtx.dataset.initialized = 'true';
   }
 
   // Timeline de ingresos extraordinarios
   const timelineCtx = document.getElementById('timelineIngresos');
-  if (timelineCtx) {
+  if (timelineCtx && !timelineCtx.dataset.initialized) {
     new Chart(timelineCtx, {
       type: 'bar',
       data: {
@@ -2573,6 +2590,7 @@ function createTransferenciasCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             display: false
@@ -2589,11 +2607,12 @@ function createTransferenciasCharts() {
         }
       }
     });
+    timelineCtx.dataset.initialized = 'true';
   }
 
   // Análisis de dependencia
   const dependenciaCtx = document.getElementById('analisisDependencia');
-  if (dependenciaCtx) {
+  if (dependenciaCtx && !dependenciaCtx.dataset.initialized) {
     new Chart(dependenciaCtx, {
       type: 'line',
       data: {
@@ -2620,6 +2639,7 @@ function createTransferenciasCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2636,6 +2656,7 @@ function createTransferenciasCharts() {
         }
       }
     });
+    dependenciaCtx.dataset.initialized = 'true';
   }
 }
 
@@ -2646,7 +2667,7 @@ function createTransferenciasCharts() {
 function createIndicadoresCharts() {
   // Ratios de endeudamiento
   const ratiosCtx = document.getElementById('ratiosEndeudamiento');
-  if (ratiosCtx) {
+  if (ratiosCtx && !ratiosCtx.dataset.initialized) {
     new Chart(ratiosCtx, {
       type: 'line',
       data: {
@@ -2675,6 +2696,7 @@ function createIndicadoresCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2705,11 +2727,12 @@ function createIndicadoresCharts() {
         }
       }
     });
+    ratiosCtx.dataset.initialized = 'true';
   }
 
   // Benchmarking con municipios
   const benchmarkCtx = document.getElementById('benchmarkingMunicipios');
-  if (benchmarkCtx) {
+  if (benchmarkCtx && !benchmarkCtx.dataset.initialized) {
     new Chart(benchmarkCtx, {
       type: 'bar',
       data: {
@@ -2734,6 +2757,7 @@ function createIndicadoresCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2750,11 +2774,12 @@ function createIndicadoresCharts() {
         }
       }
     });
+    benchmarkCtx.dataset.initialized = 'true';
   }
 
   // Evolución de indicadores clave
   const evolucionIndicadoresCtx = document.getElementById('evolucionIndicadores');
-  if (evolucionIndicadoresCtx) {
+  if (evolucionIndicadoresCtx && !evolucionIndicadoresCtx.dataset.initialized) {
     new Chart(evolucionIndicadoresCtx, {
       type: 'radar',
       data: {
@@ -2779,6 +2804,7 @@ function createIndicadoresCharts() {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: false,
         plugins: {
           legend: {
             position: 'bottom'
@@ -2792,12 +2818,13 @@ function createIndicadoresCharts() {
         }
       }
     });
+    evolucionIndicadoresCtx.dataset.initialized = 'true';
   }
 }
 
 function createPiramidePoblacional() {
   const ctx = document.getElementById('piramidePoblacional');
-  if (!ctx) return;
+  if (!ctx || ctx.dataset.initialized) return;
 
   new Chart(ctx, {
     type: 'bar',
@@ -2819,6 +2846,7 @@ function createPiramidePoblacional() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      animation: false,
       indexAxis: 'y',
       plugins: {
         legend: {
@@ -2840,6 +2868,8 @@ function createPiramidePoblacional() {
       }
     }
   });
+
+  ctx.dataset.initialized = 'true';
 }
 
 // ==========================================
