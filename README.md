@@ -2,6 +2,18 @@
 
 🌐 **Demo en vivo:** https://lazarza.axcsol.com
 
+## Datos de Referencia del Municipio
+
+| Campo | Valor |
+|-------|-------|
+| **Municipio** | La Zarza |
+| **Código Postal** | 06830 |
+| **Código INE** | 06162 |
+| **Provincia** | Badajoz (código 06) |
+| **Código Municipal** | 162 |
+| **Población 2024** | 3.345 habitantes (INE) |
+| **Superficie** | 63 km² |
+
 ## 📋 Descripción
 
 Este dashboard municipal es una **herramienta de transparencia ciudadana NO OFICIAL** que centraliza datos públicos verificables sobre el municipio de La Zarza en la provincia de Badajoz, Extremadura.
@@ -200,29 +212,45 @@ Cada dato mostrado incluye una **ventana de trazabilidad completa** accesible me
 
 ## 🌍 Fuentes de Datos Oficiales
 
-### 📈 Instituto Nacional de Estadística (INE)
-- **URL**: https://servicios.ine.es/wstempus/js/es/
-- **Datos**: Población, demografía, indicadores sociales
-- **Licencia**: CC0 (Dominio Público)
-- **Frecuencia**: Anual (primavera)
+> **Ver inventario completo**: [DATA_SOURCES.md](DATA_SOURCES.md)
 
-### 🏛️ Diputación Provincial de Badajoz
-- **URL**: https://datosabiertos.dip-badajoz.es
-- **Datos**: Presupuestos municipales, transferencias
+### ✅ Datos VERIFICADOS
+
+#### 📈 Instituto Nacional de Estadística (INE)
+- **Tabla**: 2859 (Población por municipios y sexo)
+- **Código territorio**: 06162 (La Zarza)
+- **URL**: https://www.ine.es/jaxiT3/Tabla.htm?t=2859
+- **Datos**: Población 2024: 3.345 habitantes
+- **Licencia**: CC BY 4.0
+- **Estado**: ✅ VERIFICADO
+
+#### 🏛️ Diputación Provincial de Badajoz (CKAN)
+- **API**: https://datosabiertos.dip-badajoz.es/api/3/action/
+- **Filtro**: codigo_provincia=6, codigo_municipio=162
+- **Datasets con datos de La Zarza**:
+  - casas-consistoriales: 8 registros
+  - centros-culturales: 6 registros
+  - instalaciones-deportivas: 5 registros
+  - parques: 9 registros
+  - centros-ensenanza: 3 registros
+  - depositos: 5 registros
 - **Licencia**: CC-BY (Atribución)
-- **Frecuencia**: Trimestral/Anual
+- **Estado**: ✅ VERIFICADO
 
-### 📊 Datos.gob.es (CKAN Nacional)
-- **URL**: https://datos.gob.es
-- **Datos**: Subvenciones, ayudas públicas
-- **Licencia**: Variable por dataset
-- **Frecuencia**: Mensual/Trimestral
+### ⚠️ Datos PENDIENTES DE VERIFICACIÓN
 
-### 🏰 Junta de Extremadura
-- **URL**: https://www.juntaex.es
-- **Datos**: Patrimonio cultural, inventarios BIC
-- **Licencia**: CC-BY (Atribución)
-- **Frecuencia**: Semestral
+#### 💰 Presupuestos Municipales
+- **Estado**: 🔴 SIN FUENTE VERIFICADA
+- **Acción requerida**: Buscar en Portal de Transparencia del Ayuntamiento o Rendición de Cuentas
+
+#### 📊 Subvenciones
+- **Estado**: ⚠️ DATOS ILUSTRATIVOS
+- **Fuente potencial**: Base de Datos Nacional de Subvenciones (BDNS)
+- **URL**: https://www.pap.hacienda.gob.es/bdnstrans/
+
+#### 🏰 Patrimonio Cultural
+- **Estado**: ⚠️ PENDIENTE
+- **Fuente potencial**: Junta de Extremadura - Patrimonio
 
 ### 🗺️ OpenStreetMap
 - **URL**: https://overpass-api.de/api/interpreter
