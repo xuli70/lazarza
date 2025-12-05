@@ -2199,53 +2199,11 @@ function initializeModals() {
 // ==========================================
 
 function initializeCharts() {
-  // Gráfico de evolución poblacional
-  createPoblacionChart();
-  
   // Gráficos de presupuesto
   createPresupuestoCharts();
-  
+
   // Pirámide poblacional
   createPiramidePoblacional();
-}
-
-function createPoblacionChart() {
-  const ctx = document.getElementById('poblacionChart');
-  if (!ctx || ctx.dataset.initialized) return;
-
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: poblacionHistorica.labels,
-      datasets: [{
-        label: 'Población',
-        data: poblacionHistorica.data,
-        borderColor: '#0066CC',
-        backgroundColor: 'rgba(0, 102, 204, 0.1)',
-        tension: 0.4,
-        fill: true
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      animation: false,
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: false,
-          min: Math.min(...poblacionHistorica.data) - 50,
-          max: Math.max(...poblacionHistorica.data) + 50
-        }
-      }
-    }
-  });
-
-  ctx.dataset.initialized = 'true';
 }
 
 function createPresupuestoCharts() {
@@ -3573,10 +3531,9 @@ function showModal(title, content) {
 // Actualizar inicialización de gráficos
 function initializeCharts() {
   // Gráficos existentes
-  createPoblacionChart();
   createPresupuestoCharts();
   createPiramidePoblacional();
-  
+
   // Nuevos gráficos de Hacienda
   createTransferenciasCharts();
   createIndicadoresCharts();
