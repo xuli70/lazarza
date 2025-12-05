@@ -76,9 +76,13 @@ traceabilityData = {
 ```
 
 ### Visualization Libraries
-- **Chart.js** - Line charts, donut charts, bar charts for population/budget data
+- **Chart.js** - Line charts, donut charts, bar charts for budget/financial data
+- **Pure CSS Charts** - Population evolution chart (HTML/CSS only, no canvas flickering)
 - **Leaflet + OpenStreetMap** - Interactive maps for heritage and tourism points
 - **QRCode.js** - QR codes for verification links in modals
+
+### Population Chart (CSS-only)
+The main population evolution chart on the home page uses pure HTML/CSS bars instead of Chart.js canvas to prevent flickering during scroll. Each bar uses CSS custom properties (`--bar-height`) for dynamic heights, with `data-year` and `data-value` attributes for labels.
 
 ### CSS Architecture
 Uses CSS custom properties (variables) defined in `:root`. Key tokens:

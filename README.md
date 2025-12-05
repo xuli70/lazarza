@@ -168,7 +168,7 @@ Cada dato mostrado incluye una **ventana de trazabilidad completa** accesible me
 ## 🛠️ Stack Técnico
 
 - **Frontend**: HTML5, CSS3 (Grid/Flexbox), JavaScript (ES6+)
-- **Gráficos**: Chart.js para visualizaciones interactivas
+- **Gráficos**: Chart.js para visualizaciones interactivas + CSS puro para gráficos optimizados
 - **Mapas**: Leaflet + OpenStreetMap para mapas interactivos
 - **Tipografía**: Inter (Google Fonts) para máxima legibilidad
 - **Iconos**: SVG inline para escalabilidad
@@ -192,7 +192,8 @@ Cada dato mostrado incluye una **ventana de trazabilidad completa** accesible me
 
 ### 📊 Visualizaciones
 - **KPIs**: Tarjetas destacadas con tendencias
-- **Gráficos de Línea**: Evolución temporal de datos
+- **Gráficos de Barras CSS**: Evolución poblacional optimizada (sin canvas, sin parpadeo)
+- **Gráficos de Línea**: Evolución temporal de datos (Chart.js)
 - **Gráficos Donut**: Distribución por categorías
 - **Barras Horizontales**: Pirámides poblacionales
 - **Mapas**: Markers con información contextual

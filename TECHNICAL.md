@@ -191,43 +191,49 @@ function openTraceabilityModal(sourceId) {
 ### 📊 Inicialización de Gráficos
 ```javascript
 function initializeCharts() {
-  // Gráfico de evolución poblacional
-  createPoblacionChart();
-  
-  // Gráficos de presupuesto
+  // Gráficos de presupuesto (Chart.js)
   createPresupuestoCharts();
-  
-  // Pirámide poblacional
+
+  // Pirámide poblacional (Chart.js)
   createPiramidePoblacional();
+
+  // Nota: El gráfico de evolución poblacional usa CSS puro
+  // para evitar problemas de renderizado con canvas
+}
+```
+
+### 📈 Gráfico de Población (CSS Puro)
+El gráfico de evolución poblacional en la página de inicio usa HTML/CSS puro
+en lugar de Chart.js para evitar parpadeos durante el scroll:
+
+```html
+<div class="poblacion-chart-container">
+  <div class="poblacion-bars">
+    <div class="poblacion-bar" style="--bar-height: 100%;"
+         data-year="2015" data-value="2.987"></div>
+    <!-- ... más barras ... -->
+  </div>
+  <div class="poblacion-legend">
+    <span class="legend-min">2.841</span>
+    <span class="legend-trend">↘ Tendencia: -4.7% (10 años)</span>
+    <span class="legend-max">2.987</span>
+  </div>
+</div>
+```
+
+```css
+.poblacion-bar {
+  flex: 1;
+  height: var(--bar-height);
+  background: linear-gradient(to top, var(--primary-500), var(--primary-400));
 }
 
-function createPoblacionChart() {
-  new Chart(document.getElementById('poblacionChart'), {
-    type: 'line',
-    data: {
-      labels: poblacionHistorica.labels,
-      datasets: [{
-        label: 'Población',
-        data: poblacionHistorica.data,
-        borderColor: '#0066CC',
-        backgroundColor: 'rgba(0, 102, 204, 0.1)',
-        tension: 0.4,
-        fill: true
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: { 
-        y: { 
-          beginAtZero: false,
-          min: Math.min(...poblacionHistorica.data) - 50,
-          max: Math.max(...poblacionHistorica.data) + 50
-        }
-      }
-    }
-  });
+.poblacion-bar.highlight { /* Año de recuperación (2023) */
+  background: linear-gradient(to top, var(--success-500), var(--success-400));
+}
+
+.poblacion-bar.current { /* Año actual (2024) */
+  background: linear-gradient(to top, var(--warning-500), var(--warning-400));
 }
 ```
 
