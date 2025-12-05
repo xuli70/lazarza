@@ -1,0 +1,13 @@
+# Windows Zone.Identifier files (WSL metadata)
+*:Zone.Identifier
+
+# Compressed archives
+*.zip
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

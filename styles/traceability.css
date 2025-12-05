@@ -1,0 +1,511 @@
+/**
+ * ESTILOS ESPECÍFICOS PARA LA VENTANA DE TRAZABILIDAD
+ * Dashboard Municipal de La Zarza
+ */
+
+/* ==========================================
+   VENTANA DE TRAZABILIDAD - ESTILOS ADICIONALES
+   ========================================== */
+
+.traceability-section {
+  font-family: var(--font-family);
+}
+
+.trace-header {
+  background: var(--neutral-50);
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-24);
+  border-left: 4px solid var(--success-500);
+}
+
+.trace-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.trace-timestamp {
+  font: var(--text-small);
+  color: var(--neutral-600);
+  font-weight: 500;
+}
+
+.trace-content {
+  margin-bottom: var(--space-32);
+}
+
+.trace-subsection {
+  margin-bottom: var(--space-32);
+  padding-bottom: var(--space-24);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.trace-subsection:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.trace-subsection h4 {
+  font: var(--text-body);
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-16);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.trace-details {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.trace-details dt {
+  font: var(--text-small);
+  font-weight: 600;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trace-details dd {
+  font: var(--text-body);
+  color: var(--neutral-900);
+  margin: 0;
+  padding-left: var(--space-16);
+  border-left: 2px solid var(--primary-100);
+}
+
+.trace-details dd code {
+  background: var(--neutral-50);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  color: var(--primary-700);
+}
+
+.trace-details dd a {
+  color: var(--primary-500);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.trace-details dd a:hover {
+  text-decoration: underline;
+}
+
+.verification-links {
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-16);
+}
+
+.qr-container {
+  text-align: center;
+  padding: var(--space-16);
+  background: var(--neutral-50);
+  border-radius: var(--radius-sm);
+  margin: var(--space-16) 0;
+}
+
+.qr-container canvas {
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+}
+
+.qr-container p {
+  margin: var(--space-8) 0 0 0;
+  font: var(--text-small);
+  color: var(--neutral-600);
+}
+
+.qr-fallback {
+  text-align: center;
+  padding: var(--space-16);
+  background: var(--neutral-50);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--neutral-200);
+}
+
+.qr-fallback p {
+  margin-bottom: var(--space-8);
+  font: var(--text-small);
+  color: var(--neutral-600);
+}
+
+.qr-fallback a {
+  color: var(--primary-500);
+  text-decoration: none;
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.verification-instruction {
+  background: var(--primary-100);
+  padding: var(--space-16);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--primary-500);
+  margin: var(--space-16) 0;
+  font: var(--text-small);
+  color: var(--neutral-700);
+}
+
+.verification-instruction strong {
+  color: var(--neutral-900);
+}
+
+.changes-list {
+  background: var(--neutral-50);
+  border-radius: var(--radius-sm);
+  padding: var(--space-16);
+}
+
+.change-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.change-item:last-child {
+  border-bottom: none;
+}
+
+.change-date {
+  font: var(--text-small);
+  font-weight: 600;
+  color: var(--primary-500);
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+.change-action {
+  font: var(--text-body);
+  color: var(--neutral-700);
+}
+
+.trace-footer {
+  background: var(--neutral-50);
+  padding: var(--space-24);
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-32);
+}
+
+.disclaimer {
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-24);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.disclaimer h4 {
+  font: var(--text-body);
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.disclaimer p {
+  font: var(--text-small);
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+.disclaimer strong {
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+.report-issue h4 {
+  font: var(--text-body);
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.report-issue p {
+  font: var(--text-small);
+  color: var(--neutral-600);
+  margin-bottom: var(--space-16);
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.report-form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: var(--space-12);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+  font: var(--text-body);
+  font-family: var(--font-family);
+  resize: vertical;
+}
+
+.report-form input[type="email"] {
+  width: 100%;
+  padding: var(--space-12);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+  font: var(--text-body);
+  font-family: var(--font-family);
+}
+
+.report-form textarea:focus,
+.report-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.report-form button {
+  align-self: flex-start;
+}
+
+/* ==========================================
+   ESTADOS ADICIONALES PARA INDICADORES
+   ========================================== */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  font: var(--text-small);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-verified {
+  background: rgba(0, 170, 0, 0.1);
+  color: var(--success-500);
+  border: 1px solid rgba(0, 170, 0, 0.2);
+}
+
+.status-partial {
+  background: rgba(255, 170, 0, 0.1);
+  color: var(--warning-500);
+  border: 1px solid rgba(255, 170, 0, 0.2);
+}
+
+.status-error {
+  background: rgba(204, 0, 0, 0.1);
+  color: var(--error-500);
+  border: 1px solid rgba(204, 0, 0, 0.2);
+}
+
+.status-offline {
+  background: rgba(185, 28, 28, 0.1);
+  color: var(--offline-500);
+  border: 1px solid rgba(185, 28, 28, 0.2);
+}
+
+/* ==========================================
+   RESPONSIVIDAD PARA MODAL DE TRAZABILIDAD
+   ========================================== */
+
+@media (max-width: 768px) {
+  .trace-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+  }
+  
+  .trace-details {
+    gap: var(--space-6);
+  }
+  
+  .verification-links {
+    flex-direction: column;
+  }
+  
+  .change-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  
+  .change-date {
+    min-width: auto;
+  }
+  
+  .trace-details dd {
+    padding-left: 0;
+    border-left: none;
+    margin-top: var(--space-4);
+  }
+  
+  .report-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trace-subsection {
+    margin-bottom: var(--space-24);
+    padding-bottom: var(--space-16);
+  }
+  
+  .trace-details dt {
+    font-size: 12px;
+  }
+  
+  .trace-details dd {
+    font-size: 14px;
+  }
+  
+  .verification-instruction {
+    font-size: 13px;
+  }
+  
+  .qr-container canvas {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+/* ==========================================
+   ANIMACIONES ADICIONALES PARA LA MODAL
+   ========================================== */
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalContentScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal.active {
+  animation: modalFadeIn 250ms ease-out;
+}
+
+.modal.active .modal-content {
+  animation: modalContentScaleIn 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================
+   MEJORAS DE ACCESIBILIDAD
+   ========================================== */
+
+.traceability-btn:focus,
+.modal-close:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+.report-form textarea:focus,
+.report-form input[type="email"]:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.trace-details dd code {
+  user-select: all;
+  cursor: text;
+}
+
+/* ==========================================
+   TEMA OSCURO (FUTURO)
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-900: #F8F9FA;
+    --neutral-600: #CED4DA;
+    --neutral-50: #212529;
+    --neutral-100: #343A40;
+  }
+  
+  .trace-header {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .qr-container,
+  .changes-list,
+  .disclaimer,
+  .trace-footer {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .trace-details dd code {
+    background: rgba(0, 0, 0, 0.3);
+    color: #7FB3FF;
+  }
+  
+  .verification-instruction {
+    background: rgba(0, 102, 204, 0.1);
+  }
+}
+
+/* ==========================================
+   PRINT STYLES PARA LA MODAL
+   ========================================== */
+
+@media print {
+  .modal {
+    display: block !important;
+    position: static !important;
+    background: white !important;
+    padding: var(--space-32) !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    display: none !important;
+  }
+  
+  .modal-body {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  
+  .traceability-section {
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  
+  .trace-subsection {
+    break-inside: avoid;
+    margin-bottom: 1rem !important;
+  }
+  
+  .verification-links,
+  .report-form {
+    display: none !important;
+  }
+}
